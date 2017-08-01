@@ -1,0 +1,32 @@
+{
+  "name": "rest_api",
+  "version": "0.1.0",
+  "description": "REST API for work with media service",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongodb": "^2.2.30"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vladknp/REST-API.git"
+  },
+  "keywords": [
+    "rest",
+    "api"
+  ],
+  "author": "Nazarchuk Vladislav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vladknp/REST-API/issues"
+  },
+  "homepage": "https://github.com/vladknp/REST-API#readme"
+}
