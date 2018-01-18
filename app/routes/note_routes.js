@@ -56,9 +56,7 @@ module.exports = function(app, db) {
   // Обновление 
   app.put('/notes/:id', (req, res) => {
     const id = req.params.id;
-    console.log('id: ', id)
     const details = { '_id': new ObjectID(id) };
-    console.log('details: ', details)
     const note = { text: req.body.body, title: req.body.title };
 
     db.collection('notes').update(details, note, (err, result) => {
