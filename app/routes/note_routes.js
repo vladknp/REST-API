@@ -1,6 +1,17 @@
 const ObjectID = require('mongodb').ObjectID;
 
 module.exports = function(app, db) {
+  // Получение всех записей
+  app.get('/notes', (req, res) => {
+    db.collection('notes').find().toArray((err, item) => {
+      if (err) {
+        res.send({ 'error': 'An error has occurred' });
+      } else {
+        res.send(item);
+      }
+    })
+  })
+
   // Получение записи
   app.get('/notes/:id', (req, res) => {
     const id = req.params.id;
